@@ -1,4 +1,5 @@
 import { CloseButton } from './CloseButton';
+import { feedbackTypes } from '../constants';
 
 export function WidgetForm() {
   return (
@@ -8,7 +9,25 @@ export function WidgetForm() {
         <CloseButton />
       </header>
 
-      <p>Hello, World</p>
+      <div className="flex py-8 gap-2 w-full">
+        {
+          Object.entries(feedbackTypes).map(([key, value]) => {
+            const { title } = value;
+            const { source, alt } = value.image;
+
+            return (
+              <button
+                className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent transition-all duration-500 hover:border-brand-500 focus:border-brand-500 focus:outline-none"
+                key={key}
+                type="button"
+              >
+                <img src={source} alt={alt} />
+                <span>{title}</span>
+              </button>
+            );
+          })
+        }
+      </div>
 
       <footer className="text-xs text-neutral-400">
         Feito com ♥ por
