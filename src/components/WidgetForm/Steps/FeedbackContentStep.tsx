@@ -4,16 +4,21 @@ import { CloseButton } from '../../CloseButton';
 
 interface FeedbackContentStepProps {
   feedbackType: FeedbackType;
+  setFeedbackTypeToInitialState: () => void;
 }
 
 export function FeedbackContentStep(props: FeedbackContentStepProps) {
-  const { feedbackType } = props;
+  const { feedbackType, setFeedbackTypeToInitialState } = props;
   const { title, image: { source, alt } } = feedbackTypes[feedbackType];
 
   return (
     <>
       <header>
-        <button type="button" className=" absolute top-5 left-5 text-zinc-400 hover:text-zinc-100">
+        <button
+          type="button"
+          className=" absolute top-5 left-5 text-zinc-400 hover:text-zinc-100"
+          onClick={setFeedbackTypeToInitialState}
+        >
           <ArrowLeft weight="bold" className="w-4 h-4" />
         </button>
         <span className="text-xl leading-6 flex gap-2 items-center">
