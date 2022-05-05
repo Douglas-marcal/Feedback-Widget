@@ -33,7 +33,7 @@ export function ScreenshotButton(props: ScreenshotButtonProps) {
         style={{
           backgroundImage: `url(${screenshot})`,
           backgroundPosition: 'right bottom',
-          backgroundSize: 100,
+          backgroundSize: 180,
         }}
       >
         <Trash weight="fill" />
