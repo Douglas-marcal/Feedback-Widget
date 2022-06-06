@@ -16,12 +16,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Widget />
       <StatusBar
         style="inverted"
         backgroundColor='transparent'
         translucent
       />
+      <Widget />
     </View>
   );
 }
