@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { ChatTeardropDots } from 'phosphor-react-native';
-import { TouchableOpacity} from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import BottomSheet from '@gorhom/bottom-sheet';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
@@ -45,7 +45,6 @@ function Widget() {
         />
       
       </TouchableOpacity>
-
       <BottomSheet
         ref={bottomSheetRef}
         snapPoints={[1, 280]}
@@ -54,7 +53,7 @@ function Widget() {
       >
         {
           feedbackSent
-            ? ( <Success /> )
+            ? ( <Success onSendAnotherFeedback={handleRestartFeedback} /> )
             : (
               <>
                 {
