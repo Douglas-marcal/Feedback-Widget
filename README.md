@@ -24,8 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-
-## 🔖 Layout
+Projeto desenvolvido durante o NLW (Next Level Week) da [Rocketseat](https://www.rocketseat.com.br/)
 
 
 ---
